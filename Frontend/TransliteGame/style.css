@@ -1,0 +1,26 @@
+#background{
+    background-image: url('imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+h1{
+  font-family: 'Press Start 2P', cursive;
+  
+}
+
+.text-blue{
+  color: #329fec;
+}
+
+.blue{
+    background-color: #329fec;
+}
+
+#speaker{
+  cursor: pointer;
+}
+.row{
+	margin-right: 0px !important;
+	margin-left: 0px !important
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+<head>
+	<title>MainMenu</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />
+	<link rel="stylesheet" href="css/animations.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<div class="blackscreen">
+		<div class="help">
+			<ul>
+				<li>Победите противника</li>
+				<li>Получите опыт</li>
+				<li>Получите вещи</li>
+				<li>Прокачивайте уровень</li>
+				<li>Проходите задания</li>
+			</ul>
+			<div class="help__btn">ЗАКРЫТЬ</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="content">
+			<div class="content__top">
+				<div class="content__top-title">ВЫБОР КЛАССА:</div>
+				<div class="content__top-iconsleft" onclick="playWooman();"></div>
+				<div class="content__top-iconsright" onclick="playMan();"></div>
+			</div>
+			<div class="clear"></div>
+			<div class="content__middle">
+				<div class="content__middle-man"></div>
+			</div>
+				<p style="text-align: center; color: #fff; margin-bottom: 20px;">ТВОЕ ИМЯ, ГЕРОЙ</p>
+			<div class="content__bottom">
+				<input type="text" name="name" class="content__bottom-name" maxlength="11">
+<!-- 				<div class="content__bottom-icons"></div>
+				<div class="content__bottom-icons"></div>
+				<div class="content__bottom-icons"></div> -->
+			</div>
+			<div class="content__class">ВОИН</div>
+		</div>
+	</div>
+	<div class="info">
+		<div class="info__control">
+			<div class="info__control-help"></div>
+			<div class="info__control-sound" id="button"></div>
+		</div>
+		<div class="info__chat">
+			<div class="info__chat-title">ЧАТ</div>
+			<textarea class="info__chat-windows"></textarea>
+			<div class="info__chat-send">Отправить</div>
+			<div class="info__chat-sms" disabled="disabled"></div>
+		</div>
+	</div>
+	<div class="startgame" onclick="playSword();">НАЧАТЬ БИТВУ</div>
+	<div class="back" onclick="location.href='../StartGame/index.html'">НАЗАД</div>
+<!-- 	<div class="sword slideInLeft"></div> -->
+
+<div class="friendblock">
+	<div class="friend">
+		<div class="friend__title">Пригласите друзей</div>
+		<div class="friend__windows">
+			<div class="friend__windows-user">
+				<div class="friend__windows-user-img" style="background: url('icons/avatar1.jpeg') center center no-repeat; background-size: cover;"></div>
+				<div class="friend__windows-user-name">Никита Вербух</div>
+				<div class="friend__windows-user-lvl">20 lvl</div>
+				<div class="friend__windows-user-class">Воин</div>
+			</div>
+			<div class="friend__windows-user">
+				<div class="friend__windows-user-img" style="background: url('icons/avatar2.jpg') center center no-repeat; background-size: cover;"></div>
+				<div class="friend__windows-user-name">Николай Гаврюш</div>
+				<div class="friend__windows-user-lvl">20 lvl</div>
+				<div class="friend__windows-user-class">Воин</div>
+			</div>
+			<div class="friend__windows-user">
+				<div class="friend__windows-user-img" style="background: url('icons/avatar3.png') center center no-repeat; background-size: cover;"></div>
+				<div class="friend__windows-user-name">Геннадий Ковал</div>
+				<div class="friend__windows-user-lvl">20 lvl</div>
+				<div class="friend__windows-user-class">Воин</div>
+			</div>
+		</div>
+		<div class="friend__select">
+			<div class="arrowleft"></div>
+			<div class="friend__select-people" data-id="123456">
+				<div class="friend__select-people-user">
+					<div class="friend__select-people-user-img" style="background: url('icons/avatar4.png') center center no-repeat; background-size: cover;"></div>
+					<div class="friend__select-people-user-name">Гузеев Никита</div>
+				</div>
+			</div>
+			<div class="arrowright"></div>
+		</div>
+	</div>
+
+	<div class="friends">
+		<div class="friends-icon"></div>
+	</div>
+</div>
+
+<audio id="audio" src="sound/musik_fon.mp3"></audio>
+<audio id="audioMAN" src="sound/manselect.mp3"></audio>
+<audio id="audioWOOMAN" src="sound/woomanselect.mp3"></audio>
+<audio id="audioSWORD" src="sound/swipe.mp3"></audio>
+
+<script>
+var audio = document.getElementById('audio');
+var button = document.getElementById('button');
+
+button.addEventListener('click', playPause, false);
+
+function playPause() {
+  if (!audio.paused) {
+    audio.pause();
+    // audio.currentTime = 0; // Uncomment this line for stop
+    button.classList.remove('pause');
+    button.classList.add('info__control-sound');
+  } else {
+    audio.play();
+    button.classList.remove('info__control-sound');
+    button.classList.add('pause');
+  }
+}
+
+function playMan() {
+  var sound = document.getElementById("audioMAN");
+  sound.play();
+}
+function playWooman() {
+  var sound = document.getElementById("audioWOOMAN");
+  sound.play();
+}
+
+
+function playSword() {
+  var sound = document.getElementById("audioSWORD");
+  sound.play();
+  var name = $('.content__bottom-name').val();
+	localStorage.setItem('cureentUser', name);
+	currentClass = localStorage.getItem("currentClass");
+	let data = {"VKID":name,"Class":parseInt(currentClass),"Clan":"aaaaa"}
+	var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://10.0.31.45:8080/api/user/create",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json",
+  },
+  "processData": false,
+  "data": JSON.stringify(data)
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+  setTimeout(()=>{
+  	window.location.href = "../FightGame/index.html";
+  }, 1000 )
+
+}
+
+
+</script>
+</body>
+</html>

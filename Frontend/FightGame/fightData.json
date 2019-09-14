@@ -1,0 +1,37 @@
+{
+"heroes" : {
+    "hero1" : {
+        "HP":100,
+        "Class":"warrior",
+        "Lvl":1
+    },
+    "hero2" : {
+        "HP":100,
+        "Class":"heal",
+        "Lvl":1
+    },
+    "hero3" : {
+        "HP":100,
+        "Class":"warrior",
+        "Lvl":1
+    }
+},
+"enemies" :{
+    "enemy1" : {
+        "HP":100,
+        "Class":"warrior",
+        "Lvl":1
+    },
+    "enemy2" : {
+        "HP":100,
+        "Class":"heal",
+        "Lvl":1
+    },
+    "enemy3" : {
+        "HP":100,
+        "Class":"warrior",
+        "Lvl":1
+    }
+}
+
+}

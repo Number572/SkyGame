@@ -1,0 +1,389 @@
+*
+	margin: 0
+	padding: 0
+.clear 
+	clear: both
+
+.clearfix:after 
+	content: ""
+	display: table
+	clear: both
+body
+	background: url('../img/background.jpg') center -88px no-repeat
+	width: 100%
+	height: 100%
+	background-size: cover
+	font-family: 'Press Start 2P', cursive
+
+input
+	font-family: 'Press Start 2P', cursive
+	text-transform: uppercase
+.wrapper
+	width: 100%
+	height: 100%
+	padding-top: 190px
+	display: flex
+	justify-content: center
+.content
+	float: left
+	width: 100%
+	height: auto
+	&__top
+		width: 100%
+		height: 100px
+		text-align: center
+		&-title
+			text-align: center
+			width: 100%
+			height: 20px
+			margin-bottom: 20px
+			color: #fff
+		&-iconsleft
+			float: left
+			width: 60px
+			height: 60px
+			margin-left: 680px
+			background: url('../icons/heal.png') center center no-repeat
+			background-size: contain
+			cursor: pointer
+		&-iconsright
+			float: right
+			width: 60px
+			height: 60px
+			margin-right: 680px
+			background: url('../icons/warrior.png') center center no-repeat
+			background-size: contain
+			cursor: pointer
+	&__middle
+		width: 100%
+		height: 230px
+		position: relative
+		&-man
+			width: 100px
+			height: 130px
+			background: blue
+			margin: 0 auto
+			position: absolute
+			top: 50%
+			margin-top: -65px
+			left: 50%
+			margin-left: -50px
+			background: url('../icons/warrior.png') center center no-repeat
+			background-size: contain
+		&-wooman
+			width: 100px
+			height: 130px
+			background: blue
+			margin: 0 auto
+			position: absolute
+			top: 50%
+			margin-top: -65px
+			left: 50%
+			margin-left: -50px
+			background: url('../icons/heal.png') center center no-repeat
+			background-size: contain
+	&__bottom
+		width: 100%
+		height: 40px
+		position: relative
+		&-name
+			width: 200px
+			height: 40px
+			margin-bottom: 20px
+			border-radius: 10px
+			outline: none
+			border: none
+			background: #484848
+			color: #fff
+			box-sizing: border-box
+			padding: 10px
+			font-size: 16px
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-left: -100px
+			margin-top: -20px
+	&__class
+		width: 200px
+		height: 40px
+		margin: 0 auto
+		margin-top: 20px
+		font-size: 30px
+		text-align: center
+		line-height: 40px
+		color: #e0a600
+.pause
+	width: 40px
+	height: 40px
+	background: url('../icons/sound_on.png')
+	background-size: cover
+	margin-right: 20px
+	cursor: pointer
+	&:last-child
+		margin-right: 0px
+.info
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 20%
+	height: auto
+	&__control
+		width: 100%
+		height: 40px
+		display: flex
+		justify-content: center
+		&-help,
+		&-sound
+			width: 40px
+			height: 40px
+			margin-right: 20px
+			cursor: pointer
+			&:last-child
+				margin-right: 0px
+		&-sound
+			background: url('../icons/no-sound.png')
+			background-size: cover
+		&-help
+			background: url('../icons/help.png')
+			background-size: cover
+	&__chat
+		width: 100%
+		height: 210px
+		background: #808080
+		box-sizing: border-box
+		padding: 0 10px 0 10px
+		margin-top: 20px
+		position: relative
+		border-top-left-radius: 10px
+		&-title
+			text-align: center
+			width: 100%
+			color: #fff
+			line-height: 30px
+			height: 30px
+		&-windows
+			width: 100%
+			height: 90px
+			background: #484848
+			color: #fff
+			font-size: 18px
+			box-sizing: border-box
+			padding: 10px
+			border-radius: 10px
+			resize: none
+			outline: none
+			border: none
+		&-footer
+			color: #fff
+			text-align: center
+			line-height: 30px
+			height: 30px
+		&-send
+			position: absolute
+			right: 10px
+			bottom: 90px
+			width: 150px
+			height: 30px
+			line-height: 30px
+			background: #329fec
+			text-align: center
+			color: #fff
+			font-size: 14px
+			border-radius: 10px
+			border-top-right-radius: 0px
+			border-bottom-left-radius: 0px
+			cursor: pointer
+		&-sms
+			margin-top: 10px
+			width: 100%
+			height: 65px
+			resize: none
+			border: none
+			outline: none
+			background: gray
+			color: #fff
+			overflow: hidden
+			font-size: 10px
+.startgame, .back
+	color: #fff
+	cursor: pointer
+	text-align: center
+	margin: 0 auto
+	margin-top: 50px
+	height: 40px
+	line-height: 40px
+	width: 200px
+	border-top: 1px solid #96d1f8
+	background: #329fec
+	// background: #122791
+	// background: -webkit-gradient(linear, left top, left bottom, from(#2da2fc), to(#122791))
+	// background: -moz-linear-gradient(top, #2da2fc, #122791)
+	// background: -ms-linear-gradient(top, #2da2fc, #122791)
+	// background: -o-linear-gradient(top, #2da2fc, #122791)
+	-webkit-border-radius: 40px
+	-moz-border-radius: 40px
+	border-radius: 40px
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2)
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2)
+	box-shadow: 0 1px 2px rgba(0,0,0,.2)
+	text-shadow: rgba(0,0,0,.4) 0 1px 0
+	font-size: 14px
+	text-decoration: none
+	vertical-align: middle
+
+.friendblock
+	width: 410px
+	height: 500px
+	position: absolute
+	top: 190px
+	left: 0
+	z-index: 1
+.friends
+	width: 40px
+	height: 40px
+	background: #329fec
+	border-top-right-radius: 10px
+	border-bottom-right-radius: 10px
+	cursor: pointer
+	float: left
+.friends-icon
+	width: 40px
+	height: 40px
+	background-size: cover
+	background: url('../icons/friends.png')
+
+.friend
+	width: 370px
+	height: 500px
+	background: rgba(0,0,0,0.4)
+	float: left
+	border-bottom-right-radius: 10px
+	box-sizing: border-box
+	&__title
+		background: #329fec
+		width: 100%
+		height: 40px
+		color: #fff
+		line-height: 40px
+		text-align: center
+	&__windows
+		margin: 20px
+		width: 320px
+		height: 320px
+		background: rgba(0,0,0,0.8)
+		box-sizing: border-box
+		padding: 20px
+		border-radius: 10px
+		&-user
+			width: 100%
+			height: 90px
+			margin-bottom: 5px
+			&-img
+				width: 90px
+				height: 90px
+				margin-right: 20px
+				float: left
+			&-name
+				color: #fff
+				margin-bottom: 10px
+				width: 330px
+				font-size: 12px
+			&-lvl
+				color: #fff
+				margin-bottom: 10px
+				width: 330px
+			&-class
+				color: #fff
+				width: 330px
+			// &-close
+			// 	float: right
+			// 	width: 20px
+			// 	height: 20px
+			// 	background: red
+	&__select
+		width: 330px
+		height: 80px
+		margin: 0 20px
+		margin-bottom: 20px
+		overflow: hidden
+		&-people
+			width: 230px
+			height: 100%
+			float: left
+			overflow: hidden
+			&-user
+				width: 230px
+				overflow: hidden
+				cursor: pointer
+				margin: 0 auto
+				margin-right: 10px
+				margin-bottom: 10px
+				&-img
+					margin: 0 auto
+					width: 70px
+					background: red
+					height: 60px
+					margin-bottom: 5px
+				&-name
+					color: #fff
+					font-size: 10px
+					text-align: center
+.arrowleft
+	width: 40px
+	height: 40px
+	float: left
+	background: url('../icons/arrow-left.png') center center no-repeat
+	background-size: cover
+	margin-top: 4%
+	margin-right: 10px
+	cursor: pointer
+.arrowright
+	width: 40px
+	height: 40px
+	float: right
+	background: url('../icons/arrow-right.png') center center no-repeat
+	background-size: cover
+	margin-top: 4%
+	margin-left: 10px
+	cursor: pointer
+.sword
+	width: 225px
+	height: 52px
+	background: url('../icons/sword.png') center center no-repeat
+	background-size: cover
+.blackscreen
+	background: rgba(0,0,0,0.8)
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index: 2
+	display: none
+.help
+	width: 320px
+	height: 200px
+	background: #329fec
+	margin: 0 auto
+	position: absolute
+	top: 50%
+	left: 50%
+	margin-top: -100px
+	margin-left: -160px
+	font-size: 14px
+	color: #fff
+	text-transform: uppercase
+	box-sizing: border-box
+	padding: 20px
+	border-radius: 10px
+	& > ul > li
+		margin-bottom: 10px
+	&__btn
+		margin-top: 11px
+		height: 30px
+		width: 140px
+		background: #fff
+		color: #329fec
+		margin: 0 auto
+		text-align: center
+		line-height: 30px
+		border-radius: 10px
+		cursor: pointer

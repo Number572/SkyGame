@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VK Hackathon</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="blue  text-center p-3 ">
+      <h1>Up Your Level !</h1>
+      <div class="col-md-6" style="margin-left: 350px;">
+            <h3 style="border: 2px solid black;cursor: pointer;margin-left: 15px;" onclick="location.href='../StartGame/index.html'">Назад</h3>
+          </div>
+    </header>
+    <main class="container p-3">
+      <!-- Instructions -->
+      <div class=" text-center row  mx-auto">
+        <div class="col-md-9 mx-auto">
+          <div class="card card-body bg-secondary text-white mb-5">
+            <h5>Instructions</h5>
+            <p>
+              Complete each sentence with the correct verbe
+            </p>
+          </div>
+        </div>
+
+        <!--        Form        -->
+       <div class="form-inline mx-auto">
+          <ol>
+            <li class="form-group phrase1">
+              I <input type="text" class="form-control mx-2 phrase1"  id="verbe1"/> (go) to Italy
+              three years ago.
+            </li>
+            <li class="form-group my-2 phrase2">
+              That is the best drink I have ever
+              <input type="text" class="form-control mx-2"  id="verbe2"/> (drink).
+            </li>
+            <li class="form-group my-2 phrase3"> 
+              I <input type="text" class="form-control mx-2" id="verbe3" /> (think) of the
+              best idea.
+            </li>
+            <li class="form-group my-2 phrase4">
+              My grandmother
+              <input type="text" class="form-control mx-2"  id="verbe4"/> (sell) chocolate
+              when she was young.
+            </li>
+ 
+            <li class="form-group my-2 phrase5">
+              In Egypt, I <input type="text" class="form-control mx-2 " id="verbe5"/> (ride)
+              camels.
+            </li>
+            <li class="form-group my-2 phrase6">
+              My tree <input type="text" class="form-control mx-2"  id="verbe6"/> (grow) so
+              fast that we had to trim it.
+            </li>
+            <li class="form-group my-2 phrase7">
+              I <input type="text" class="form-control mx-2" id="verbe7"/>(buy) lots of
+              DVDs last weekend.
+            </li>
+            <li class="form-group my-2 phrase8">
+              A man <input type="text" class="form-control mx-2" id="verbe8" /> (shoot) at
+              the man, but he missed him.
+            </li>
+            <li class="form-group my-2 phrase9">
+              My brother <input type="text" class="form-control mx-2"  id="verbe9"/> (fall) down the stairs and cracked his head open.
+            </li>
+            <li class="form-group my-2 phrase10">
+              I <input type="text" class="form-control mx-2"  id="verbe10"/> (wear) my best
+              clothes yesterday.
+            </li>
+            </ol>
+          </div>
+      </div>
+    </main>
+    <div class="row">
+      <div class="col-md-9 mx-auto" >
+        <button  class="btn text-center btn-outline-success btn-block mx-auto" id="correction">Correction</button>
+      </div>
+    </div>
+
+  </body>
+  <script src="verbes.js"> </script>
+  <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+</html>
