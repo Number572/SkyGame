@@ -1,0 +1,21 @@
+	Actions with User:
+1. User create: [ echo '{"VKID": "Hero1", "Class": 0, "Clan": "kek"}' | curl -d @- http://127.0.0.1:8080/api/user/create ]
+2. User data: [ echo '{"VKID": "Hero1"}' | curl -d @- http://127.0.0.1:8080/api/user/data ]
+
+	Actions with Battle:
+1. Battle create: [ echo '{"Heroes":["Hero1", "Hero2", "Hero3"]}' | curl -d @- http://127.0.0.1:8080/api/battle/create ]
+2. Battle data: [ echo '{"Heroes":["Hero1", "Hero2", "Hero3"]}' | curl -d @- http://127.0.0.1:8080/api/battle/data ]
+3. Battle update: [ echo '{"Heroes":["Hero1", "Hero2", "Hero3"], "Attacker":"Hero1", "Defender":"Enemy1"}' | curl -d @- http://127.0.0.1:8080/api/battle/update ]
+4. Battle close: [ echo '{"Heroes":["Hero1", "Hero2", "Hero3"]}' | curl -d @- http://127.0.0.1:8080/api/battle/close ]
+
+	Actions with Chat:
+1. Chat create: [ echo '{"Message": "hello"}' | curl -d @- http://127.0.0.1:8080/api/chat/create ]
+2. Chat data: [ echo | curl -d @- http://127.0.0.1:8080/api/chat/data ]
+
+	Actions with Task:
+1. Task get: [ echo | curl -d @- http://127.0.0.1:8080/api/task/get ]
+2. Task check: [ echo '{"VKID":"Hero1", "Task":"hat", "Check":"шляпа"}' | curl -d @- http://127.0.0.1:8080/api/task/check ]
+
+	Actions with Input:
+1. Input get: [ echo | curl -d @- http://127.0.0.1:8080/api/input/get ]
+2. Input: check: [ echo '{"VKID":"Hero1", "Check":["went", "drunk", "think", "sold", "rode", "grew", "bought", "shot", "fell", "wore"]}' | curl -d @- http://127.0.0.1:8080/api/input/check ]
