@@ -1,0 +1,2 @@
+# SkyGame
+For VK Hackathon.
